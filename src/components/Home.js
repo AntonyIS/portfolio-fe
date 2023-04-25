@@ -19,6 +19,7 @@ export default function Body (){
                         <Jumbotron bg_dark={style.bg_dark}/>
                     </div>
                 </div>
+                
             </div>
         </>
     )
@@ -33,7 +34,10 @@ function Jumbotron(props){
                     Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap.
                 </p>
                 <Link to="/blogs" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                    <button className="btn btn-primary btn-lg">More ...</button>
+                    <button className="btn btn-primary btn-lg">Blogs ...</button>
+                </Link>
+                <Link to="/users" style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                    <button className="btn btn-success  btn-lg">USers ...</button>
                 </Link>
                 
             </div>
