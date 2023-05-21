@@ -6,6 +6,7 @@ export default function Body (){
             <div className="container">
                 <Jumbotron />
                 <Skills />
+                <Certifications />
             </div>
         </>
     )
@@ -18,12 +19,13 @@ function Jumbotron(props){
         twitter : "https://twitter.com/injila_antony",
         medium : "https://medium.com/@antonyshikubu",
         youtube : "https://www.youtube.com/channel/UCVuumsWaI2ws7YcZRvANbVQ",
+        golinuxcloud : "https://www.golinuxcloud.com/author/antonyshikubu/"
     }
     return(
         <>
-            <div className={`p-1 mt-3 body-tertiary rounded-3 border ${props.bg_dark}`}>
-                <div className="container-fluid py-5">
-                    <h1 className="display-1 fw-bold f2">Antony Injila</h1>
+            <div className={`p-3 mt-3 body-tertiary rounded-3 border ${props.bg_dark}`}>
+                <div className="container-fluid py-5 ">
+                    {/* <h1 className="display-6 fw-bold f2">Antony Injila</h1> */}
                     <div className="col-md-10">
                         <h4 className="display-6 fw-bold">
                             Software Engineer.
@@ -32,7 +34,7 @@ function Jumbotron(props){
                             Passionate Go and Python Developer.
                         </h5>
                         <h5 className="display-6">
-                            Technical Writer at Medium and Golinuxcloud.com.
+                            Technical Writer at <a href={urls.medium} style={{color:"inherit"}} target="_blank"  rel="noopener noreferrer">Medium</a> and <a href={urls.golinuxcloud} style={{color:"inherit"}} target="_blank"  rel="noopener noreferrer">Golinuxcloud.com</a>.
                         </h5>
                         <h5 className="display-6">
                             Currently learning TypeScript, DevOps
@@ -89,95 +91,196 @@ function Skills(){
                 <div className="container-fluid py-1">
                     <h6 className="display-6 fw-bold f2">Skills</h6>
                     <div className="accordion" id="accordionExample">
-                <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <button className="accordion-button display-6 collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-1" aria-expanded="false" aria-controls="collapse-skill-1">
-                            Golang (Pro)
-                        </button>
-                    </h2>
-                    <div id="collapse-skill-1" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div className="accordion-body">
-                        <ul className="display-6">
-                            <li>
-                                An open-source programming language supported by Google
-                            </li>
-                            <li>
-                                Easy to learn and great for teams
-                            </li>
-                            <li>
-                                Built-in concurrency and a robust standard library
-                            </li>
-                            <li>
-                                Large ecosystem of partners, communities, and tools
-                            </li>
-                        </ul>
-                    </div>
-                    </div>
-                </div>
-                <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <button className="accordion-button display-6 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-2" aria-expanded="false" aria-controls="collapse-skill-2">
-                            Python
-                        </button>
-                    </h2>
-                    <div id="collapse-skill-2" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div className="accordion-body">
-                        <p className="display-6">
-                            Python is a programming language that lets you work quickly
-                            and integrate systems more effectively
-                        </p>
-                    </div>
-                    </div>
-                </div>
-                <div className="accordion-item">
-                    <h2 className="accordion-header">
-                    <button className="accordion-button display-6 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-3" aria-expanded="false" aria-controls="collapse-skill-3">
-                        JavaScript(TypeScript)
-                    </button>
-                    </h2>
-                    <div id="collapse-skill-3" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div className="accordion-body">
-                        <p className="display-6">
-                            TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
-                        </p>
-                    </div>
-                    </div>
-                </div>
-                <div className="accordion-item">
-                    <h2 className="accordion-header">
-                    <button className="accordion-button display-6 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-4" aria-expanded="false" aria-controls="collapse-skill-4">
-                        Kubernetes
-                    </button>
-                    </h2>
-                    <div id="collapse-skill-4" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div className="accordion-body">
-                        <p className="display-6">
-                            Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
-                        </p>
-                    </div>
-                    </div>
-                </div>
-                <div className="accordion-item">
-                    <h2 className="accordion-header">
-                    <button className="accordion-button display-6 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-5" aria-expanded="false" aria-controls="collapse-skill-5">
-                        Amazon Web Services (AWS)
-                    </button>
-                    </h2>
-                    <div id="collapse-skill-5" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div className="accordion-body">
-                        <p className="display-6">
-                            Build, Deploy, and Manage Websites, Apps or Processes On AWS' Secure, Reliable Network. Sign Up for a Free Account & Experience AWS' Secure, Reliable, Scalable Services. Durable, Safe & Secure. Performance At Scale. No Upfront Commitment.
-                        </p>
-                    </div>
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button  collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-1" aria-expanded="false" aria-controls="collapse-skill-1">
+                                    Golang
+                                </button>
+                            </h2>
+                            <div id="collapse-skill-1" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                                <ul className="">
+                                    <li>
+                                        Golang technical writing.Written over 40 articles on Golinuxcloud.com and 1
+                                        article on Medium.
+                                    </li>
+                                    <li>
+                                        Develop RESTful APIs in Golang using Hexagonal architecture.
+                                    </li>
+                                    <li>
+                                        Building Backend RESTful for my portfolio
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-2" aria-expanded="false" aria-controls="collapse-skill-2">
+                                    Python
+                                </button>
+                            </h2>
+                            <div id="collapse-skill-2" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                                <ul className="">
+                                    <li>
+                                        Flask microservice development
+                                    </li>
+                                    <li>
+                                        REST API development
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                            <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-3" aria-expanded="false" aria-controls="collapse-skill-3">
+                                JavaScript
+                            </button>
+                            </h2>
+                            <div id="collapse-skill-3" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                                <ul className="">
+                                    <li>
+                                        Development of my portfolio website using ReactJS
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                            <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-5" aria-expanded="false" aria-controls="collapse-skill-5">
+                                Amazon Web Services (AWS)
+                            </button>
+                            </h2>
+                            <div id="collapse-skill-5" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                                <ul className="">
+                                    <li>
+                                        AWS IOT Core
+                                    </li>
+                                    <li>
+                                        Lambda functions
+                                    </li>
+                                    <li>
+                                        API Gateway
+                                    </li>
+                                    <li>
+                                        TimeststreamDB
+                                    </li>
+                                    <li>
+                                        DynamoDB
+                                    </li>
+                                    <li>
+                                        Route53
+                                    </li>
+                                    <li>
+                                        Amplify
+                                    </li>
+                                    <li>
+                                        S3
+                                    </li>
+                                    <li>
+                                        ECR
+                                    </li>
+                                    <li>
+                                        SNS
+                                    </li>
+                                    <li>
+                                        SQS
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    )
+}
+
+function Certifications(){
+    return (
+        <div>  
+            <div className={`p-3 mt-2 body-tertiary rounded-3 border`}>
+                <div className="container-fluid py-1">
+                    <h6 className="display-6 fw-bold f2">Certifications</h6>
+                    <div className="accordion" id="accordionExample">
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button  collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-cert-1" aria-expanded="false" aria-controls="collapse-skill-cert-1">
+                                    Go: Data Structures, Algorithms and Design Patterns With Go
+                                </button>
+                            </h2>
+                            <div id="collapse-skill-cert-1" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                                <div className="row">
+                                    <div className="col-3">
+                                        <p>Institution : Udemy</p>
+                                        <p>Issued : May 2023</p>
+                                        <p>Length : 10 total hours</p>
+                                        <p className="alert alert-info">
+                                            <a href="https://www.udemy.com/certificate/UC-1d097f04-3fcc-4868-b1d7-8ab378ddb071/" target="_blank"  rel="noopener noreferrer" style={{"text-decoration":"none"}}>
+                                                See credentials
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            </div>
+                        </div>
+
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button  collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-cert-2" aria-expanded="false" aria-controls="collapse-skill-cert-2">
+                                    Go:The Complete Developer's Guide(Golang)
+                                </button>
+                            </h2>
+                            <div id="collapse-skill-cert-2" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                                <div className="row">
+                                    <div className="col-3">
+                                        <p>Institution : Udemy</p>
+                                        <p>Issued : July 20, 2021</p>
+                                        <p>Length : 9 total hours</p>
+                                        <p className="alert alert-info">
+                                            <a href="https://www.udemy.com/certificate/UC-50def0ce-e8eb-406a-9df2-6a47690374c4/" target="_blank"  rel="noopener noreferrer" style={{"text-decoration":"none"}}>
+                                                See credentials
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            </div>
+                        </div>
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button  collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-skill-cert-3" aria-expanded="false" aria-controls="collapse-skill-cert-3">
+                                    Ultimate AWS Certified Solutions Architect Associate SAA-C03 (In progress)
+                                </button>
+                            </h2>
+                            <div id="collapse-skill-cert-3" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                                <div className="row">
+                                    <div className="col-3">
+                                        <p>Institution : Udemy</p>
+                                        <p>Issued : N/A</p>
+                                        <p>Length : 27 total hours</p>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
-
-            
         </div>
     )
 }
@@ -185,19 +288,19 @@ function Skills(){
 // function Projects(){
 //     return (
 //         <>  
-//             <h5 className="display-6">
+//             <h5 className="">
 //                 Projects
 //             </h5>
 //             <div className="accordion" id="accordionExample">
 //                 <div className="accordion-item">
 //                     <h2 className="accordion-header">
-//                         <button className="accordion-button display-6"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-1" aria-expanded="true" aria-controls="collapse-project-1">
+//                         <button className="accordion-button "  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-1" aria-expanded="true" aria-controls="collapse-project-1">
 //                             Golang
 //                         </button>
 //                     </h2>
 //                     <div id="collapse-project-1" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
 //                     <div className="accordion-body">
-//                         <ul className="display-6">
+//                         <ul className="">
 //                             <li>
 //                                 An open-source programming language supported by Google
 //                             </li>
@@ -216,13 +319,13 @@ function Skills(){
 //                 </div>
 //                 <div className="accordion-item">
 //                     <h2 className="accordion-header">
-//                         <button className="accordion-button display-6 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-2" aria-expanded="false" aria-controls="collapse-project-2">
+//                         <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-2" aria-expanded="false" aria-controls="collapse-project-2">
 //                             Python
 //                         </button>
 //                     </h2>
 //                     <div id="collapse-project-2" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
 //                     <div className="accordion-body">
-//                         <p className="display-6">
+//                         <p className="">
 //                             Python is a programming language that lets you work quickly
 //                             and integrate systems more effectively
 //                         </p>
@@ -231,13 +334,13 @@ function Skills(){
 //                 </div>
 //                 <div className="accordion-item">
 //                     <h2 className="accordion-header">
-//                     <button className="accordion-button display-6 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-3" aria-expanded="false" aria-controls="collapse-project-3">
+//                     <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-3" aria-expanded="false" aria-controls="collapse-project-3">
 //                         JavaScript(TypeScript)
 //                     </button>
 //                     </h2>
 //                     <div id="collapse-project-3" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
 //                     <div className="accordion-body">
-//                         <p className="display-6">
+//                         <p className="">
 //                             TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 //                         </p>
 //                     </div>
@@ -245,13 +348,13 @@ function Skills(){
 //                 </div>
 //                 <div className="accordion-item">
 //                     <h2 className="accordion-header">
-//                     <button className="accordion-button display-6 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-4" aria-expanded="false" aria-controls="collapse-project-4">
+//                     <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-4" aria-expanded="false" aria-controls="collapse-project-4">
 //                         Kubernetes
 //                     </button>
 //                     </h2>
 //                     <div id="collapse-project-4" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
 //                     <div className="accordion-body">
-//                         <p className="display-6">
+//                         <p className="">
 //                             Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 //                         </p>
 //                     </div>
@@ -259,13 +362,13 @@ function Skills(){
 //                 </div>
 //                 <div className="accordion-item">
 //                     <h2 className="accordion-header">
-//                     <button className="accordion-button display-6 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-5" aria-expanded="false" aria-controls="collapse-project-5">
+//                     <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-5" aria-expanded="false" aria-controls="collapse-project-5">
 //                         Amazon Web Services (AWS)
 //                     </button>
 //                     </h2>
 //                     <div id="collapse-project-5" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
 //                     <div className="accordion-body">
-//                         <p className="display-6">
+//                         <p className="">
 //                             Build, Deploy, and Manage Websites, Apps or Processes On AWS' Secure, Reliable Network. Sign Up for a Free Account & Experience AWS' Secure, Reliable, Scalable Services. Durable, Safe & Secure. Performance At Scale. No Upfront Commitment.
 //                         </p>
 //                     </div>
