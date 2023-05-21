@@ -218,7 +218,7 @@ function Certifications(){
                             <div id="collapse-skill-cert-1" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                                 <div className="row">
-                                    <div className="col-3">
+                                    <div className="col-sm-12 col-xs-12 col-md-4 col-lg-4">
                                         <p>Institution : Udemy</p>
                                         <p>Issued : May 2023</p>
                                         <p>Length : 10 total hours</p>
@@ -243,7 +243,7 @@ function Certifications(){
                             <div id="collapse-skill-cert-2" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                                 <div className="row">
-                                    <div className="col-3">
+                                    <div className="col-sm-12 col-xs-12 col-md-4 col-lg-4">
                                         <p>Institution : Udemy</p>
                                         <p>Issued : July 20, 2021</p>
                                         <p>Length : 9 total hours</p>
@@ -267,7 +267,7 @@ function Certifications(){
                             <div id="collapse-skill-cert-3" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                                 <div className="row">
-                                    <div className="col-3">
+                                    <div className="col-sm-12 col-xs-12 col-md-4 col-lg-4">
                                         <p>Institution : Udemy</p>
                                         <p>Issued : N/A</p>
                                         <p>Length : 27 total hours</p>
