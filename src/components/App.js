@@ -6,12 +6,9 @@ import Login from './Auth/Login.js'
 import Logout from './Auth/Logout.js'
 import Signup from './Auth/Signup.js'
 import Navbar from "./Home/Navbar.js";
-// import {  useState } from "react";
-
 
 
 export default function App(){
-    // const [token, setToken] = useState();
     
     return (
         <>  
