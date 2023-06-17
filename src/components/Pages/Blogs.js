@@ -1,4 +1,4 @@
-import Navbar from "./Navbar"
+import Navbar from "../Home/Navbar"
 
 export default function Blogs (){
     const style = {

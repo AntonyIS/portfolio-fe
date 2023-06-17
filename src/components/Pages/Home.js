@@ -1,8 +1,8 @@
-import Navbar from "./Navbar"
+
 export default function Body (){
     return(
         <>
-            <Navbar />
+           
             <div className="container">
                 <Jumbotron />
                 <Skills />
