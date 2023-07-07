@@ -47,7 +47,7 @@ export default function Body (){
             "institution" : "Udemy",
             "hours": "10 hours",
             "issued": "May 18th, 2023",
-            "link" : "",
+            "link" : "https://www.udemy.com/certificate/UC-1d097f04-3fcc-4868-b1d7-8ab378ddb071",
         },
         {
             "id": 3,
@@ -55,7 +55,7 @@ export default function Body (){
             "institution" : "Udemy",
             "hours": "9 hours",
             "issued": "July 20th  2023",
-            "link" : "",
+            "link" : "https://www.udemy.com/certificate/UC-50def0ce-e8eb-406a-9df2-6a47690374c4",
         },
        
     ]
