@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Blogs from './Blogs.js'
+// import Blogs from './future/Blogs.js'
 import Home from './Home.js'
 // import Users from './Users.js'
 // import Login from './Login.js'
