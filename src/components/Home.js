@@ -37,9 +37,9 @@ export default function Body (){
             "id": 1,
             "title" : "Ultimate AWS Certified Solutions Architect SAA-C03",
             "institution" : "Udemy",
-            "issued": "(In Progress)",
-            "hours": "In Progress",
-            "link" : "",
+            "issued": "July 6, 2023",
+            "hours": "27 total hours",
+            "link" : "https://www.udemy.com/certificate/UC-862e9ceb-c675-43db-b93c-6902dc6982f6/",
         },
         {
             "id": 2,
