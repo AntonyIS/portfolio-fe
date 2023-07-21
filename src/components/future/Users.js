@@ -8,8 +8,7 @@ export default function Users (){
         const response = await fetch(
           "http://127.0.0.1:8000/v1/users"
         ).then((response) => response.json());
-            
-        console.log(response)
+        
         setUsers(response);
       };
      

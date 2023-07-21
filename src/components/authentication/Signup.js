@@ -20,7 +20,10 @@ export default function Signup (){
         e.preventDefault();
 
         if (!firstname | !lastname | !email | !password1 | !password2){
-            console.log("Fill in values!")
+            setSignupErrorMessage("")
+            setPasswordNotSame(false)
+            setServerErrorMessage("Please fill all inputs")
+            return
         }else if (password1 === password2) {
             signupLogic(firstname,lastname,email, password1)
             .then((res)=>{

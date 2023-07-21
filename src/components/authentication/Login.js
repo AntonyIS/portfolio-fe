@@ -4,10 +4,13 @@ import { useNavigate } from 'react-router-dom';
 export default function Login (){
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    // const [accessToken, setAccessToken] = useState("")
+    const [accessToken, setAccessToken] = useState("")
     const [loginErrorMessage, setLoginErrorMessage] = useState("")
     const [serverErrorMessage, setServerErrorMessage] = useState("")
     const navigate = useNavigate();
+    
+
+    localStorage.setItem("accessToken", accessToken)
     
     const handleLogin = e => {
         e.preventDefault();
@@ -18,8 +21,9 @@ export default function Login (){
         }
 
         loginLogic(email, password)
+
+        
         .then((res) =>{
-            
             if (res === undefined ){
                 setLoginErrorMessage("")
                 setServerErrorMessage("Server not responding!")
@@ -30,8 +34,9 @@ export default function Login (){
                 setLoginErrorMessage("Invalid email or password!")
                 return
             }else{
+                
+                setAccessToken(res.accessToken)
                 navigate('/');
-                // setAccessToken(res.access_token)
 
             }
         })
@@ -114,24 +119,21 @@ export default function Login (){
 }
 
 const loginLogic = async (email, password) => {
-    
+  
     try {
-        const response = await fetch('http://localhost:8080/api/login', {
+        const response = await fetch('http://127.0.0.1:8081/api/v1/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({ email, password }),
         });
-        
         if (response.ok) {
-            return response.json()
-        } else {
-           
             return response.json()
         }
       } catch (error) {
-        console.log(error)
+       
         console.error('Error during login:', error);
       }
 }
+
