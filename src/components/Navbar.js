@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 export default function  Navbar(){
-    const  isAuthenticated = !!localStorage.getItem('accessToken')
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
@@ -17,37 +16,24 @@ export default function  Navbar(){
                            
                         </li>
                     </ul>
-                    <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-                        {/* {
-                            isAuthenticated ? (
-                                <li className="nav-item">
-                                    <Link to="/api/v1/logout" style={{ marginRight:"10px",color:"black", fontSize:"1.1rem", textDecoration: 'inherit'}}>
-                                        Logout
-                                    </Link>
-                                </li>
-                            ) : (
-                                <li className="nav-item">
-                                    <Link to="/api/v1/login" style={{ marginRight:"10px",color:"black", fontSize:"1.1rem", textDecoration: 'inherit'}}>
-                                        Login
-                                    </Link>
-                                </li>
-                            )
-                        }
-                         */}
-
-                        {/* <li className="nav-item">
-                            <Link to="/signup" style={{ marginRight:"10px",color:"black", fontSize:"1.1rem", textDecoration: 'inherit'}}>
-                                Signup 
+                    {/* <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                            <Link to="dashboard" style={{ marginRight:"10px",color:"black", fontSize:"1.1rem", textDecoration: 'inherit'}}>
+                                Admin
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="logout" style={{ marginRight:"10px",color:"black", fontSize:"1.1rem", textDecoration: 'inherit'}}>
+                                Logout
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="login" style={{ marginRight:"10px",color:"black", fontSize:"1.1rem", textDecoration: 'inherit'}}>
+                                Login
                             </Link>
                         </li>
                         
-                        <li className="nav-item">
-                            <Link to="/logout" style={{ marginRight:"10px",color:"black", fontSize:"1.1rem", textDecoration: 'inherit'}}>
-                                Logout
-                            </Link>
-                        </li> */}
-                        
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         </nav>

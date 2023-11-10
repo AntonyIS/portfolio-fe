@@ -2,14 +2,14 @@ import { useEffect, useState } from "react"
 
 
 export default function Body (){
-    const [data, setData] = useState([]);
+    const [projects, setProjects] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
         try {
-            const response = await fetch('http://127.0.0.1:8081/api/v1/users/');
+            const response = await fetch('http://127.0.0.1:8081/api/v1/projects/');
             const data = await response.json();
-            setData(data);
+            setProjects(data);
         } catch (error) {
             console.error(error);
         }
@@ -17,8 +17,7 @@ export default function Body (){
 
         fetchData(); // Call the function to fetch data when the component mounts
     }, []);
-
-
+   
     const skills = [
         {
             "id": 1,
@@ -81,8 +80,10 @@ export default function Body (){
         <>
             <div className="container">
                 <Jumbotron />
-                <Skills skills={skills}  users= {data} />
+                {/* <Skills skills={skills}  users= {data} /> */}
                 <Certifications certifications={certifications} />
+                
+                <Projects projects={projects} />
             </div>
         </>
     )
@@ -175,7 +176,7 @@ function SkillsCard({id,name,items}){
     )
  }
 
- function CertificationsCard({id,title,institution,hours,issued,link}){
+function CertificationsCard({id,title,institution,hours,issued,link}){
     const cardStyle = {
         height: '260px',
     };
@@ -192,7 +193,7 @@ function SkillsCard({id,name,items}){
         </div>
         
     )
- }
+}
 
 
 function Skills({skills}){
@@ -213,6 +214,7 @@ function Skills({skills}){
 }
 
 function Certifications({certifications}){
+   
     return (
         <div>  
             <div className={`p-3 mt-2 body-tertiary rounded-3 border`}>
@@ -228,98 +230,25 @@ function Certifications({certifications}){
         </div>
     )
 }
-
-// function Projects(){
-//     return (
-//         <>  
-//             <h5 className="">
-//                 Projects
-//             </h5>
-//             <div className="accordion" id="accordionExample">
-//                 <div className="accordion-item">
-//                     <h2 className="accordion-header">
-//                         <button className="accordion-button "  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-1" aria-expanded="true" aria-controls="collapse-project-1">
-//                             Golang
-//                         </button>
-//                     </h2>
-//                     <div id="collapse-project-1" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-//                     <div className="accordion-body">
-//                         <ul className="">
-//                             <li>
-//                                 An open-source programming language supported by Google
-//                             </li>
-//                             <li>
-//                                 Easy to learn and great for teams
-//                             </li>
-//                             <li>
-//                                 Built-in concurrency and a robust standard library
-//                             </li>
-//                             <li>
-//                                 Large ecosystem of partners, communities, and tools
-//                             </li>
-//                         </ul>
-//                     </div>
-//                     </div>
-//                 </div>
-//                 <div className="accordion-item">
-//                     <h2 className="accordion-header">
-//                         <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-2" aria-expanded="false" aria-controls="collapse-project-2">
-//                             Python
-//                         </button>
-//                     </h2>
-//                     <div id="collapse-project-2" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-//                     <div className="accordion-body">
-//                         <p className="">
-//                             Python is a programming language that lets you work quickly
-//                             and integrate systems more effectively
-//                         </p>
-//                     </div>
-//                     </div>
-//                 </div>
-//                 <div className="accordion-item">
-//                     <h2 className="accordion-header">
-//                     <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-3" aria-expanded="false" aria-controls="collapse-project-3">
-//                         JavaScript(TypeScript)
-//                     </button>
-//                     </h2>
-//                     <div id="collapse-project-3" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-//                     <div className="accordion-body">
-//                         <p className="">
-//                             TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
-//                         </p>
-//                     </div>
-//                     </div>
-//                 </div>
-//                 <div className="accordion-item">
-//                     <h2 className="accordion-header">
-//                     <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-4" aria-expanded="false" aria-controls="collapse-project-4">
-//                         Kubernetes
-//                     </button>
-//                     </h2>
-//                     <div id="collapse-project-4" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-//                     <div className="accordion-body">
-//                         <p className="">
-//                             Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
-//                         </p>
-//                     </div>
-//                     </div>
-//                 </div>
-//                 <div className="accordion-item">
-//                     <h2 className="accordion-header">
-//                     <button className="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project-5" aria-expanded="false" aria-controls="collapse-project-5">
-//                         Amazon Web Services (AWS)
-//                     </button>
-//                     </h2>
-//                     <div id="collapse-project-5" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-//                     <div className="accordion-body">
-//                         <p className="">
-//                             Build, Deploy, and Manage Websites, Apps or Processes On AWS' Secure, Reliable Network. Sign Up for a Free Account & Experience AWS' Secure, Reliable, Scalable Services. Durable, Safe & Secure. Performance At Scale. No Upfront Commitment.
-//                         </p>
-//                     </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </>
-//     )
-// }
+function Projects({projects}){
+    return (
+        <div>  
+            <div className={`p-3 mt-2 body-tertiary rounded-3 border`}>
+                <div className="container-fluid py-1">
+                    <h6 className="display-6 fw-bold f2">Projects</h6>
+                    <div className="row">
+                        {projects.map(item => (
+                            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl- 4">
+                            <div className="card p-3  bg-body rounded" key={item.id} >
+                            <h5 className="">{item.title}</h5>
+                                
+                            </div>
+                        </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
 
